@@ -1,1 +1,9 @@
-
+Install PostgreSQL from the Ubuntu package repository:
+>>> sudo apt-get install postgresql postgresql-contrib
+Configure PostgreSQLPermalink, Modify the Postgres UsersPermalink
+1. Change the postgres user’s Linux password:
+>>> sudo passwd postgres
+ssue the following commands to set a password for the postgres database user. Be sure to replace newpassword with a strong password and 
+keep it in a secure place
+>>> su - postgres
+>>> psql -d template1 -c "ALTER USER postgres WITH PASSWORD 'newpassword';"
